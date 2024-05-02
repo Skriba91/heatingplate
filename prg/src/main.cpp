@@ -83,11 +83,9 @@ void loop() {
       digitalWrite(pin, LOW);   // Set the GPIO low
       pin_state = 0;
     } else if (received == 'i') {
-      digitalWrite(pin, LOW);   // Increment pwm value
-      pin_state = 0;
+      ++pwm_value;   // Increment pwm value
     } else if (received == 'd') {
-      digitalWrite(pin, LOW);   // Decrement pwm value
-      pin_state = 0;
+      --pwm_value;
     }
   }
   
