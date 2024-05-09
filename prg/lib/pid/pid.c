@@ -64,7 +64,7 @@ float PID_Update(PID *pid, float target, float measurement) {
                         / (2.0f * pid->tau + pid->T);
 
     //Compute output
-    pid->out = proportional + pid->integrator + pid->integrator;
+    pid->out = proportional + pid->integrator + pid->differentiator;
 
     if (pid->out > pid->limMax) {
 
